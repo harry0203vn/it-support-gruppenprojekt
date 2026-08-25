@@ -12,3 +12,7 @@ uptime
 echo ""
 echo "Kernel:"
 uname -r
+
+echo ""
+echo "Datum und Uhrzeit:"
+date
