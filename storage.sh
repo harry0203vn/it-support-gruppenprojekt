@@ -2,14 +2,20 @@
 
 echo "Speicherinformationen"
 echo "====================="
-echo "Festplattenbelegung:"
+
+echo ""
+echo "--- Festplattenbelegung ---"
 df -h
 
 echo ""
-echo "Home-Verzeichnis:"
+echo "--- Home-Verzeichnis ---"
 echo "Größe von $HOME:"
 du -sh "$HOME" 2>/dev/null
 
 echo ""
-echo "Arbeitsspeicher:"
+echo "--- Arbeitsspeicher ---"
 free -h
+
+echo ""
+echo "--- Freier Speicher (Übersicht) ---"
+free -h | awk '/^Mem:/ {print "Frei: " $4 "   Verfügbar: " $7}'
