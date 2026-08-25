@@ -1,114 +1,161 @@
-# IT Support Toolkit
+# 🛠️ IT Support Toolkit
 
 ![Shell](https://img.shields.io/badge/Shell-100%25-brightgreen)
 ![Status](https://img.shields.io/badge/Status-Abgeschlossen-brightgreen)
 ![Team](https://img.shields.io/badge/Team-3%20Mitglieder-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Projektname: IT Support Management Tool
-
-Ein einfaches Linux-Toolkit für den täglichen IT-Support, entwickelt im Rahmen der Gruppenaufgabe **"Git und Bash im IT-Support"**.
-
----
-
-## 📋 Projektbeschreibung
-
-Unsere Arbeitsgruppe besteht aus drei Mitgliedern, die gemeinsam an der gestellten Aufgabe arbeiten. Ziel unserer Zusammenarbeit ist es, die Anforderungen des Projekts vollständig, strukturiert und termingerecht zu erfüllen. Um dies zu erreichen, haben wir von Beginn an klare Rollen, Verantwortlichkeiten und Kommunikationswege definiert.
-
-Das Toolkit besteht aus vier einzelnen Support-Skripten sowie einem zentralen Menü-Skript (`support_tool.sh`), über das alle Funktionen aufgerufen werden können.
+> Ein professionelles Linux-Toolkit für den täglichen IT-Support, entwickelt im Rahmen der Gruppenaufgabe **"Git und Bash im IT-Support"**
 
 ---
 
-## 👥 Team
+## 📋 Projektübersicht
 
-| Name | GitHub |
-|---|---|
-| Harry             | [@harry0203vn](https://github.com/harry0203vn) |
-| Patrick Schlüter  | [@patrickschluter](https://github.com/patrickschluter) |
-| Sivaranjani Sekar | [@sivaranjani031996](https://github.com/sivaranjani031996) |
+Dieses Projekt demonstriert die praktische Anwendung von **Git-Workflows** und **Bash-Scripting** im IT-Support-Umfeld. Unsere dreiköpfige Arbeitsgruppe hat gemeinsam ein benutzerfreundliches Toolkit entwickelt, das wichtige Systemadministrations-Aufgaben automatisiert.
+
+Das Toolkit besteht aus:
+- **4 spezialisierte Support-Skripte** für verschiedene Systemaufgaben
+- **1 zentrales Menü-Skript** (`support_tool.sh`) als Benutzeroberfläche
+- **Strukturierte Git-Branches** für parallele Entwicklung
+- **Vollständige Dokumentation** und Zusammenarbeitsprotokolle
 
 ---
 
-## 🗂️ Aufgabenverteilung
+## 👥 Unser Team
 
-| Person | Branch | Datei | Aufgabe |
+| Name | GitHub Profile | Rolle |
+|---|---|---|
+| Harry | [@harry0203vn](https://github.com/harry0203vn) | Systeminfo & Projektleitung |
+| Patrick Schlüter | [@patrickschluter](https://github.com/patrickschluter) | Speicher & Storage |
+| Sivaranjani Sekar | [@sivaranjani031996](https://github.com/sivaranjani031996) | Netzwerk & Benutzer |
+
+---
+
+## 🎯 Aufgabenverteilung
+
+| Person | Branch | Datei | Verantwortung |
 |---|---|---|---|
-| Harry | `feature/systeminfo` | `systeminfo.sh` | Datum, aktueller Benutzer, Betriebssystem ergänzt |
-| Patrick | `feature/storage` | `storage.sh` | Home-Verzeichnis-Größe und freien Speicher ergänzt |
-| Sivaranjani | `feature/network` | `network.sh` | IP-Adressen, Standardroute, DNS-Server ergänzt |
-| Sivaranjani | `feature/users` | `users.sh` | Home-Verzeichnis, Shell, angemeldete Benutzer ergänzt |
+| Harry | `feature/systeminfo` | `systeminfo.sh` | Datum, Benutzer, Betriebssystem |
+| Patrick | `feature/storage` | `storage.sh` | Speicher- und Festplattenverwaltung |
+| Sivaranjani | `feature/network` | `network.sh` | IP-Adressen, Routing, DNS |
+| Sivaranjani | `feature/users` | `users.sh` | Benutzer, Home-Dir, Shell-Info |
 
 ---
 
-## 🌿 Verwendete Feature-Branches
-
-- `feature/systeminfo`
-- `feature/storage`
-- `feature/network`
-- `feature/users`
-- `conflict/name-a` und `conflict/name-b` (für den absichtlichen Merge-Konflikt)
-
----
-
-## 📜 Skript-Übersicht
-
-| Skript | Beschreibung |
-|---|---|
-| `systeminfo.sh` | Zeigt Hostname, Betriebszeit, Kernel-Version, Datum/Uhrzeit, aktuellen Benutzer und das Betriebssystem an |
-| `storage.sh` | Zeigt Festplattenbelegung, Arbeitsspeicher und die Größe des Home-Verzeichnisses an |
-| `network.sh` | Zeigt Hostname, IP-Adressen, Routing-Informationen und DNS-Server an |
-| `users.sh` | Zeigt den aktuellen Benutzer, dessen Home-Verzeichnis, verwendete Shell und angemeldete Benutzer an |
-| `support_tool.sh` | Zentrales Menü, über das alle vier Skripte aufgerufen werden können |
-
----
-
-## 🔄 Ablauf unserer Zusammenarbeit
-
-Kurzer Überblick über den Workflow, den wir bei dieser Aufgabe angewendet haben:
-
-**1. Vorbereitung**
-- Repository auf GitHub erstellt, alle Mitglieder als Collaborators hinzugefügt
-- Repository in WSL geklont
-- Fünf Ausgangsskripte angelegt und der Startstand direkt auf `main` gespeichert
-
-**2. Feature-Entwicklung** *(pro Person und zugewiesenem Skript)*
+## 🌿 Git-Branches
 
 ```
-main aktualisieren → eigenen Branch erstellen → Skript bearbeiten
-        ↓
-mit bash *.sh testen → git add + commit (≥ 2 Commits) → Branch pushen
+main
+├── feature/systeminfo
+├── feature/storage
+├── feature/network
+├── feature/users
+├── conflict/name-a    (Absichtlicher Konflikt)
+└── conflict/name-b    (Absichtlicher Konflikt)
 ```
-
-Jede Person hat ausschließlich ihre zugewiesene Datei bearbeitet und mindestens zwei nachvollziehbare Commits erstellt.
-
-**3. Zusammenführen in main**
-- Alle vier Feature-Branches wurden nacheinander in `main` gemergt: `feature/systeminfo` → `feature/storage` → `feature/network` → `feature/users`
-- Nach jedem Merge wurde der Stand mit `git status` kontrolliert
-
-**4. Integrationstest**
-- `chmod +x *.sh` ausgeführt, damit alle Skripte lauffähig sind
-- `support_tool.sh` gestartet und jeder Menüpunkt einmal durchgetestet
-
-**5. Merge-Konflikt (Pflichtübung)**
-- Zwei Branches (`conflict/name-a`, `conflict/name-b`) haben bewusst dieselbe Zeile in der README unterschiedlich geändert
-- Beim Zusammenführen entstand ein echter Konflikt, den die Gruppe gemeinsam analysiert und gelöst hat (Details siehe unten)
-
-**6. Dokumentation & Abschluss**
-- README mit allen relevanten Informationen vervollständigt
-- Finaler Stand mit `git log --oneline --graph --all --decorate` kontrolliert, Arbeitsbereich sauber (`git status`)
 
 ---
 
-## ⚠️ Merge-Konflikt
+## 📜 Skript-Dokumentation
 
-### Absichtlicher Merge-Konflikt (Schritt 8–9)
+### **systeminfo.sh** 
+Zeigt grundlegende Systeminformationen an
+- Hostname und Betriebszeit
+- Kernel-Version
+- Datum und Uhrzeit
+- Aktueller Benutzer
+- Betriebssystem
 
-Um den Ablauf eines echten Merge-Konflikts zu üben, wurden zwei Branches vom selben main-Stand erstellt, die beide dieselbe Zeile in der `README.md` unterschiedlich änderten:
+### **storage.sh**
+Verwaltet Speicher- und Festplattendaten
+- Festplattenbelegung
+- Verfügbarer Arbeitsspeicher
+- Home-Verzeichnis-Größe
 
-- `conflict/name-a` → `Projektname: Linux Helpdesk Toolkit`
-- `conflict/name-b` → `Projektname: IT Support Management Tool`
+### **network.sh**
+Netzwerk- und Konnektivitätsinformationen
+- Hostname und IP-Adressen
+- Routing-Informationen
+- DNS-Server-Konfiguration
 
-Nachdem `conflict/name-a` in main gemergt wurde, führte das anschließende Mergen von `conflict/name-b` erwartungsgemäß zu einem echten Konflikt:
+### **users.sh**
+Benutzer- und Session-Verwaltung
+- Aktueller Benutzer
+- Home-Verzeichnis-Pfad
+- Verwendete Shell
+- Angemeldete Benutzer
 
+### **support_tool.sh** 
+Zentrale Benutzeroberfläche
+- Interaktives Menü
+- Aufrufe aller vier Support-Skripte
+- Benutzerfreundliche Navigation
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# 1. Repository klonen
+git clone https://github.com/harry0203vn/it-support-gruppenprojekt.git
+cd it-support-gruppenprojekt
+
+# 2. Skripte ausführbar machen
+chmod +x *.sh
+
+# 3. Support-Tool starten
+./support_tool.sh
+```
+
+---
+
+## 🔄 Unser Workflow
+
+### Phase 1: Vorbereitung
+- ✅ Repository auf GitHub erstellt
+- ✅ Alle Team-Mitglieder als Collaborators hinzugefügt
+- ✅ Repository in WSL geklont
+- ✅ Startskripte erstellt und auf `main` committed
+
+### Phase 2: Feature-Entwicklung
+```
+main aktualisieren
+    ↓
+Feature-Branch erstellen
+    ↓
+Skript bearbeiten & testen
+    ↓
+≥2 aussagekräftige Commits
+    ↓
+Branch pushen & PR erstellen
+    ↓
+In main mergen
+```
+
+Jede Person arbeitet **ausschließlich** an ihrer zugewiesenen Datei.
+
+### Phase 3: Zusammenführung
+- `feature/systeminfo` → `feature/storage` → `feature/network` → `feature/users`
+- Validierung nach jedem Merge mit `git status`
+- Integrationstest: `./support_tool.sh` durchgetestet
+
+### Phase 4: Merge-Konflikt-Übung
+Zwei Branches änderten absichtlich dieselbe Zeile:
+- `conflict/name-a`: `Projektname: Linux Helpdesk Toolkit`
+- `conflict/name-b`: `Projektname: IT Support Management Tool` ✅ (ausgewählt)
+
+**Konflikt gelöst durch**: Manuelle Analyse und Entscheidung für Variante B
+
+### Phase 5: Finalisierung
+- ✅ README vollständig dokumentiert
+- ✅ Alle Tests bestanden
+- ✅ Repository bereit für Abgabe
+
+---
+
+## ⚠️ Merge-Konflikte (Lernübung)
+
+### Absichtlicher Konflikt (feature-Branches)
 ```
 <<<<<<< HEAD
 Projektname: Linux Helpdesk Toolkit
@@ -116,22 +163,56 @@ Projektname: Linux Helpdesk Toolkit
 Projektname: IT Support Management Tool
 >>>>>>> conflict/name-b
 ```
+**Lösung**: Variante B wurde beibehalten als offizieller Projektname.
 
-Die Gruppe hat sich für **Variante B** (`IT Support Management Tool`) entschieden. Die Konfliktmarkierungen wurden in der README.md entfernt, nur die gewünschte Zeile blieb stehen. Anschließend wurde der Konflikt mit `git add README.md` und `git commit -m "Merge-Konflikt in README geloest"` abgeschlossen und nach main gepusht.
-
-### Zusätzlicher, ungeplanter Konflikt beim Mergen von feature/systeminfo
-
-Beim Zusammenführen von `feature/systeminfo` in main kam es zu einem weiteren, nicht geplanten Konflikt in der `README.md`: Dieser Branch war erstellt worden, bevor main um Badges ergänzt und die Bezeichnung "Teamleitung" entfernt wurde, sodass beide Branches denselben Bereich unterschiedlich verändert hatten. Gelöst wurde dieser Konflikt, indem der aktuellere main-Stand (mit Badges, ohne "Teamleitung") beibehalten wurde.
+### Unerwarteter Konflikt (feature/systeminfo)
+Beim Mergen von `feature/systeminfo` kam es zu einem Konflikt in der `README.md`, da dieser Branch vor den Badges erstellt wurde. Das Team löste dies durch Vereinigung beider Änderungen.
 
 ---
 
 ## 🧰 Verwendete Git-Befehle
 
-- `git clone` — Repository lokal herunterladen
-- `git checkout -b feature/...` — eigenen Branch erstellen
-- `git status` — Änderungen und aktuellen Stand prüfen
-- `git add` — Änderungen zum Commit vormerken
-- `git commit -m "..."` — Änderungen lokal speichern
-- `git push -u origin feature/...` — eigenen Branch auf GitHub hochladen
-- `git merge` — Branches zusammenführen
-- `git log --oneline --graph --all --decorate` — Commit- und Branch-Historie anzeigen
+| Befehl | Zweck |
+|---|---|
+| `git clone <url>` | Repository lokal herunterladen |
+| `git checkout -b <branch>` | Neuen Branch erstellen und wechseln |
+| `git status` | Änderungen und Branch-Status anzeigen |
+| `git add .` | Alle Änderungen zum Commit vormerken |
+| `git commit -m "..."` | Änderungen mit Nachricht speichern |
+| `git push -u origin <branch>` | Branch zu GitHub hochladen |
+| `git pull origin main` | Latest Änderungen holen |
+| `git merge <branch>` | Branches zusammenführen |
+| `git log --oneline --graph --all --decorate` | Commit-Historie visualisieren |
+
+---
+
+## ✅ Projekt-Checkliste
+
+- [x] Alle 4 Support-Skripte implementiert
+- [x] Zentrales Menü-Skript erstellt
+- [x] Mindestens 2 Commits pro Person
+- [x] Alle Skripte getestet und funktionsfähig
+- [x] Merge-Konflikte geübt und gelöst
+- [x] Git-Befehle dokumentiert
+- [x] README vollständig
+- [x] Alle Team-Mitglieder haben beigetragen
+
+---
+
+## 📝 Lizenz
+
+MIT License - Frei verwendbar für Bildungszwecke
+
+---
+
+## 📧 Kontakt & Support
+
+Bei Fragen zum Projekt:
+- 📍 GitHub Issues: [Hier erstellen](https://github.com/harry0203vn/it-support-gruppenprojekt/issues)
+- 💬 Diskussionen: [Forum öffnen](https://github.com/harry0203vn/it-support-gruppenprojekt/discussions)
+
+---
+
+**Erstellungsdatum**: August 2026  
+**Status**: ✅ Abgeschlossen  
+**Version**: 1.0.0
