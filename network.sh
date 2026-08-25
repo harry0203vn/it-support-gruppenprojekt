@@ -12,3 +12,7 @@ hostname -I
 echo ""
 echo "Routing:"
 ip route
+
+echo ""
+echo "Standardroute:"
+ip route | grep default
