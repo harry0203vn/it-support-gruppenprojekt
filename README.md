@@ -63,7 +63,28 @@ Das Toolkit besteht aus vier einzelnen Support-Skripten sowie einem zentralen Me
 
 ## ⚠️ Merge-Konflikt
 
-*(Dieser Abschnitt wird ergänzt, sobald der absichtliche Merge-Konflikt in Schritt 8–9 erzeugt und gelöst wurde.)*
+### Absichtlicher Merge-Konflikt (Schritt 8–9)
+
+Um den Ablauf eines echten Merge-Konflikts zu üben, wurden zwei Branches vom selben main-Stand erstellt, die beide dieselbe Zeile in der `README.md` unterschiedlich änderten:
+
+- `conflict/name-a` → `Projektname: Linux Helpdesk Toolkit`
+- `conflict/name-b` → `Projektname: IT Support Management Tool`
+
+Nachdem `conflict/name-a` in main gemergt wurde, führte das anschließende Mergen von `conflict/name-b` erwartungsgemäß zu einem echten Konflikt:
+
+```
+<<<<<<< HEAD
+Projektname: Linux Helpdesk Toolkit
+=======
+Projektname: IT Support Management Tool
+>>>>>>> conflict/name-b
+```
+
+Die Gruppe hat sich für **Variante B** (`IT Support Management Tool`) entschieden. Die Konfliktmarkierungen wurden in der README.md entfernt, nur die gewünschte Zeile blieb stehen. Anschließend wurde der Konflikt mit `git add README.md` und `git commit -m "Merge-Konflikt in README geloest"` abgeschlossen und nach main gepusht.
+
+### Zusätzlicher, ungeplanter Konflikt beim Mergen von feature/systeminfo
+
+Beim Zusammenführen von `feature/systeminfo` in main kam es zu einem weiteren, nicht geplanten Konflikt in der `README.md`: Dieser Branch war erstellt worden, bevor main um Badges ergänzt und die Bezeichnung "Teamleitung" entfernt wurde, sodass beide Branches denselben Bereich unterschiedlich verändert hatten. Gelöst wurde dieser Konflikt, indem der aktuellere main-Stand (mit Badges, ohne "Teamleitung") beibehalten wurde.
 
 ---
 
