@@ -16,3 +16,11 @@ uname -r
 echo ""
 echo "Datum und Uhrzeit:"
 date
+
+echo ""
+echo "Aktueller Benutzer:"
+whoami
+
+echo ""
+echo "Betriebssystem:"
+cat /etc/os-release | grep PRETTY_NAME
