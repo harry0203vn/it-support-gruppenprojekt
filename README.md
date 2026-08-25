@@ -1,7 +1,7 @@
 # IT Support Toolkit
 
 ![Shell](https://img.shields.io/badge/Shell-100%25-brightgreen)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Status](https://img.shields.io/badge/Status-Abgeschlossen-brightgreen)
 ![Team](https://img.shields.io/badge/Team-3%20Mitglieder-blue)
 
 Projektname: IT Support Management Tool
@@ -58,6 +58,43 @@ Das Toolkit besteht aus vier einzelnen Support-Skripten sowie einem zentralen Me
 | `network.sh` | Zeigt Hostname, IP-Adressen, Routing-Informationen und DNS-Server an |
 | `users.sh` | Zeigt den aktuellen Benutzer, dessen Home-Verzeichnis, verwendete Shell und angemeldete Benutzer an |
 | `support_tool.sh` | Zentrales Menü, über das alle vier Skripte aufgerufen werden können |
+
+---
+
+## 🔄 Ablauf unserer Zusammenarbeit
+
+Kurzer Überblick über den Workflow, den wir bei dieser Aufgabe angewendet haben:
+
+**1. Vorbereitung**
+- Repository auf GitHub erstellt, alle Mitglieder als Collaborators hinzugefügt
+- Repository in WSL geklont
+- Fünf Ausgangsskripte angelegt und der Startstand direkt auf `main` gespeichert
+
+**2. Feature-Entwicklung** *(pro Person und zugewiesenem Skript)*
+
+```
+main aktualisieren → eigenen Branch erstellen → Skript bearbeiten
+        ↓
+mit bash *.sh testen → git add + commit (≥ 2 Commits) → Branch pushen
+```
+
+Jede Person hat ausschließlich ihre zugewiesene Datei bearbeitet und mindestens zwei nachvollziehbare Commits erstellt.
+
+**3. Zusammenführen in main**
+- Alle vier Feature-Branches wurden nacheinander in `main` gemergt: `feature/systeminfo` → `feature/storage` → `feature/network` → `feature/users`
+- Nach jedem Merge wurde der Stand mit `git status` kontrolliert
+
+**4. Integrationstest**
+- `chmod +x *.sh` ausgeführt, damit alle Skripte lauffähig sind
+- `support_tool.sh` gestartet und jeder Menüpunkt einmal durchgetestet
+
+**5. Merge-Konflikt (Pflichtübung)**
+- Zwei Branches (`conflict/name-a`, `conflict/name-b`) haben bewusst dieselbe Zeile in der README unterschiedlich geändert
+- Beim Zusammenführen entstand ein echter Konflikt, den die Gruppe gemeinsam analysiert und gelöst hat (Details siehe unten)
+
+**6. Dokumentation & Abschluss**
+- README mit allen relevanten Informationen vervollständigt
+- Finaler Stand mit `git log --oneline --graph --all --decorate` kontrolliert, Arbeitsbereich sauber (`git status`)
 
 ---
 
