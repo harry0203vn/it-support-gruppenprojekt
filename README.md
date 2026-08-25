@@ -18,8 +18,8 @@ Das Toolkit besteht aus vier einzelnen Support-Skripten sowie einem zentralen Me
 
 | Name | GitHub |
 |---|---|
-| Harry (Teamleitung) | [@harry0203vn](https://github.com/harry0203vn) |
-| Patrick Schlüter | [@patrickschluter](https://github.com/patrickschluter) |
+| Harry             | [@harry0203vn](https://github.com/harry0203vn) |
+| Patrick Schlüter  | [@patrickschluter](https://github.com/patrickschluter) |
 | Sivaranjani Sekar | [@sivaranjani031996](https://github.com/sivaranjani031996) |
 
 ---
