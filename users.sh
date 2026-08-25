@@ -16,3 +16,7 @@ echo $HOME
 echo ""
 echo "Verwendete Shell:"
 echo $SHELL
+
+echo ""
+echo "Angemeldete Benutzer:"
+who
