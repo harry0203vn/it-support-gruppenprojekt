@@ -59,7 +59,7 @@ Dieses Projekt demonstriert die **praktische Anwendung von Git-Workflows** und *
 <tr>
 <td><strong>Harry</strong></td>
 <td><a href="https://github.com/harry0203vn">@harry0203vn</a></td>
-<td>🔰 Projektleitung & Entwicklung</td>
+<td>💻 Entwicklung</td>
 <td>🖥️ Systeminfo & Kernel</td>
 </tr>
 <tr>
@@ -71,7 +71,7 @@ Dieses Projekt demonstriert die **praktische Anwendung von Git-Workflows** und *
 <tr>
 <td><strong>Sivaranjani Sekar</strong></td>
 <td><a href="https://github.com/sivaranjani031996">@sivaranjani031996</a></td>
-<td>🔗 Entwicklung</td>
+<td>💻 Entwicklung</td>
 <td>🌐 Netzwerk & Benutzer Management</td>
 </tr>
 </table>
