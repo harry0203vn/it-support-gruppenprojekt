@@ -4,7 +4,7 @@
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 ![Team](https://img.shields.io/badge/Team-3%20Mitglieder-blue)
 
-Projektname: IT Support Toolkit
+Projektname: IT Support Management Tool
 
 Ein einfaches Linux-Toolkit für den täglichen IT-Support, entwickelt im Rahmen der Gruppenaufgabe **"Git und Bash im IT-Support"**.
 
